@@ -1,0 +1,11 @@
+---
+  - name: Python PLaybook
+    hosts: webservers
+    become: true
+    tasks:
+
+    - name: Install python3-pip httpd  (state=present is optional)
+      apt:
+        name: python3
+        state: present
+
